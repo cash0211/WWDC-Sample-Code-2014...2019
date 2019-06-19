@@ -19,7 +19,7 @@ struct TextDrawable: Layout, Drawable {
 
     func draw(in context: CGContext) {
         UIGraphicsPushContext(context)
-        let attributedString = NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 40)])
+        let attributedString = NSAttributedString(string: text, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 40)])
         var frame = self.frame
         let height = min(attributedString.size().height, frame.size.height)
         frame.origin.y += 0.5 * frame.size.height - height

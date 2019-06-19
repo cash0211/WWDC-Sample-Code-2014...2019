@@ -31,7 +31,6 @@ class DreamScene: SKScene {
 
     init(dream: Dream, size: CGSize) {
         self.dream = dream
-
         super.init(size: size)
 
         backgroundColor = .clear

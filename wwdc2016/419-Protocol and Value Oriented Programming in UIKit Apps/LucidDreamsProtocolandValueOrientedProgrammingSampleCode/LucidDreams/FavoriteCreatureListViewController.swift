@@ -69,14 +69,14 @@ class FavoriteCreatureListViewController: UITableViewController {
 
         tableView.beginUpdates()
         if let old = old {
-            let indexOfPreviousFavoriteCreature = Dream.Creature.all.index(of: old)!
+            let indexOfPreviousFavoriteCreature = Dream.Creature.all.firstIndex(of: old)!
             let indexPathOfPreviousFavoriteCreature = IndexPath(row: indexOfPreviousFavoriteCreature, section: 0)
             tableView.deselectRow(at: indexPathOfPreviousFavoriteCreature, animated: true)
             let previousFavoriteCreatureCell = tableView.cellForRow(at: indexPathOfPreviousFavoriteCreature)
             previousFavoriteCreatureCell?.accessoryType = .none
         }
 
-        let indexOfNewFavoriteCreature = Dream.Creature.all.index(of: favoriteCreature!)!
+        let indexOfNewFavoriteCreature = Dream.Creature.all.firstIndex(of: favoriteCreature!)!
         let indexPathofNewFavoriteCreature = IndexPath(row: indexOfNewFavoriteCreature, section: 0)
         tableView.deselectRow(at: indexPathofNewFavoriteCreature, animated: true)
 

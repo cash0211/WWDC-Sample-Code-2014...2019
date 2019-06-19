@@ -24,14 +24,14 @@ extension SKNode: Layout {
 }
 
 extension SKSpriteNode {
-    override func layout(in rect: CGRect) {
-        super.layout(in: rect)
-
-        /*
-            `SKSpriteNode`s have a settable size, so we'll update the node's size
-            in addition to it's `position` (which is done in `SKNode`'s `layout(in:)`
-            method).
-        */
-        size = rect.size
-    }
+//    override func layout(in rect: CGRect) {
+//        super.layout(in: rect)
+//
+//        /*
+//            `SKSpriteNode`s have a settable size, so we'll update the node's size
+//            in addition to it's `position` (which is done in `SKNode`'s `layout(in:)`
+//            method).
+//        */
+//        size = rect.size
+//    }
 }

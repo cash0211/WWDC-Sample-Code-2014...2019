@@ -112,7 +112,7 @@ struct DreamListViewControllerModel: Equatable {
         } else if dreams.count - 1 == other.dreams.count {
             dreamChange = .removed(dreams.last!)
         } else if dreams.count == other.dreams.count {
-            let updatedIndexes: [Int] = dreams.enumerated().flatMap { idx, dream in
+            let updatedIndexes: [Int] = dreams.enumerated().compactMap { idx, dream in
                 if dream != other.dreams[idx] {
                     return idx
                 }

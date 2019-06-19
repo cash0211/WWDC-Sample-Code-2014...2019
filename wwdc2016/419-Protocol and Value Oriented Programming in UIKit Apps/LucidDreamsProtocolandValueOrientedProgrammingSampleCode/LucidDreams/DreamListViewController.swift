@@ -150,7 +150,7 @@ class DreamListViewController: UITableViewController {
             end of this method.
         */
         let editing: Bool
-        let rightBarItem: (UIBarButtonSystemItem, enabled: Bool)?
+        let rightBarItem: (UIBarButtonItem.SystemItem, enabled: Bool)?
 
         /*
             A subset of the bar buttons that we can have as a bar button item in
@@ -339,7 +339,7 @@ class DreamListViewController: UITableViewController {
 
     func configureCreatureCell(_ cell: CreatureCell, at indexPath: IndexPath) {
         let creature = model.favoriteCreature
-        let selectionStyle: UITableViewCellSelectionStyle
+        let selectionStyle: UITableViewCell.SelectionStyle
         if case .viewing = state {
             selectionStyle = .default
         }
@@ -353,7 +353,7 @@ class DreamListViewController: UITableViewController {
     }
 
     func configureDreamCell(_ cell: DreamCell, at indexPath: IndexPath) {
-        let accessoryType: UITableViewCellAccessoryType
+        let accessoryType: UITableViewCell.AccessoryType
         switch state {
             case .duplicating:
                 accessoryType = .none
@@ -522,7 +522,7 @@ class DreamListViewController: UITableViewController {
 
                 let activityViewController = UIActivityViewController(activityItems: images, applicationActivities: [])
 
-                activityViewController.completionWithItemsHandler = { _ in
+                activityViewController.completionWithItemsHandler = { _, _, _, _ in
                     completion()
                 }
 

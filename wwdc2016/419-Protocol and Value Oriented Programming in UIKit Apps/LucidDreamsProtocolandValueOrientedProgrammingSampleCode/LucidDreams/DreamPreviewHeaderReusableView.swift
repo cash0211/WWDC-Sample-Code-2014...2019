@@ -43,7 +43,6 @@ class DreamPreviewHeaderReusableView: UICollectionReusableView {
 
     override init(frame: CGRect) {
         skView = SKView(frame: CGRect(origin: .zero, size: frame.size))
-
         super.init(frame: frame)
 
         addSubview(skView)
